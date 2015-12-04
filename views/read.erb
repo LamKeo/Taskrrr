@@ -1,0 +1,49 @@
+<h3>Item List</h3>
+
+<% if @message %>
+  <strong><%= @message %></strong>
+<% end %>
+
+<li><a href='/create'>Create Task</a></li>
+
+<table>
+  <thead>
+    <th>
+      Id
+    </th>
+    <th>
+      Name
+    </th>
+    <th>
+      Description
+    </th>
+    <th>
+      Update?
+    </th>
+    <th>
+      Destroy?
+    </th>
+  </thead>
+
+  <tbody>
+    <% @tasks.each do |task| %>
+      <tr>
+        <td>
+          <%= task.id %>
+        </td>
+        <td>
+          <%= task.name %>
+        </td>
+        <td>
+          <%= task.description %>
+        </td>
+        <td>
+          <a href='/update/<%= task.id %>'>Update</a>
+        </td>
+        <td>
+          <a href='/destroy/<%= task.id %>'>Destroy</a>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

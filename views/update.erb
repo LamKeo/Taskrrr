@@ -1,0 +1,12 @@
+<h3>Update Task</h3>
+
+<p>
+  <em>Update task #<%= @task.id %>.</em>
+</p>
+
+<form action="/update" method="post">
+  <input type="hidden" name="id" value="<%= @task.id %>">
+  <input type="text" name="name" value="<%= @task.name %>">
+  <input type="text" name="desc" value="<%= @task.description %>">
+  <input type="submit">Update Task</input>
+</form>
