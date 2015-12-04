@@ -1,2 +1,2 @@
 # Taskrrr
-Task app that needs a lot of help!
+Task app that can list all of the things you don't want to do as an adult.
